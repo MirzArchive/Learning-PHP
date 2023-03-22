@@ -13,7 +13,9 @@
 
     echo 'Hello, ' . $name;
     
-    echo "Hello, $name;
+    echo "Hello, $name";
+
+    echo $first_name;
     ?>
 </body>
 </html>
