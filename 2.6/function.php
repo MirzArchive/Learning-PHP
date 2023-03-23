@@ -1,12 +1,7 @@
 <?php
 
 $title = 'Function';
-
-function output($value) {
-    echo '<pre>';
-    print_r($value);
-    echo '</pre>';
-}
+$log = '<p>Hello user! here is the output of your php code</p>';
 
 $foods = [
     'Krabby Patty',
@@ -16,7 +11,35 @@ $foods = [
     'Ramen'
 ];
 
+$foodss = [
+    ['name' => 'Krabby Patty', 'price' => 6899],
+    ['name' => 'Shawarma', 'price' => 867],
+    ['name' => 'Carbonara', 'price' => 2588],
+    ['name' => 'Lasagna', 'price' => 4273],
+    ['name' => 'Ramen', 'price' => 2147]
+];
+
+function output($value)
+{
+    global $log;
+    echo $log;
+    echo '<pre>';
+    print_r($value);
+    echo '</pre>';
+}
+
+function pluck($arr, $key) {
+    $result = array_map(function($item) use($key){
+        return $item[$key];
+    }, $arr);
+
+    return $result;
+}
+
+$food_names = pluck($foodss, 'price');
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,8 +66,8 @@ $foods = [
                 <h1 class="mt-5"></h1>
             </div>
         </div>
-        <div class="row">
-            <?php output($foods)?>
+        <div class="column">
+            <?php output($food_names) ?>
         </div>
     </div>
 </body>
