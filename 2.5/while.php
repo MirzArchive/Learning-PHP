@@ -1,6 +1,6 @@
 <?php
 
-$title = 'for loop';
+$title = 'while loop';
 
 $foods = [
     'Krabby Patty',
@@ -41,7 +41,11 @@ $foods = [
             <table class="table table-striped">
                 <?php
 
-                for ($i = 0; $i < count($foods); $i++) echo '<tr><td>' . $foods[$i] . '</td></tr>';
+                $i = 0;
+                while ($i < count($foods)) {
+                    echo '<tr><td>' . $foods[$i] . '</td></tr>';
+                    ++$i;
+                }
 
                 ?>
             </table>
