@@ -27,8 +27,8 @@ $foodsWithKeys = [
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>PHP Fundamentals: <?= $title; ?></title>
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../assets/css/php-fundamentals.css" rel="stylesheet" />
+    <link href="../Assets/CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Assets/CSS/php-fundamentals.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -48,7 +48,6 @@ $foodsWithKeys = [
         <div class="row">
             <table class="table table-striped">
                 <?php
-
                 foreach ($foods as $food) {
                     echo "<tr><td>$food</td></tr>";
                 }

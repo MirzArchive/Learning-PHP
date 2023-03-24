@@ -1,7 +1,7 @@
 <?php
 $title = 'Includes';
-include('./../inc/header.php');
-require('./../inc/functions.php');
+include('./../Inc/header.php');
+require('./../Inc/functions.php');
 
 $log = '<p>Hello user! here is the output of your php code</p>';
 

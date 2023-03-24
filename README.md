@@ -58,7 +58,7 @@ In this section, you can find all the materials used during the course, such as 
 * 7.1 Using Names Arguments
 * 7.2 Promoting Class Properties
 * 7.3 Simplifyng String Functions
-* 8 Conclusion
+* 8.0 Conclusion
 
 ## Assignments
 
