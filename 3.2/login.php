@@ -16,6 +16,11 @@ if (isset($_POST['login'])) {
     if (!$email) {
         $status = 'Please enter a valid email';
     }
+
+    $password = $_POST['password'];
+    if (strlen($password) < 8) {
+        $status = 'A Password should be atleast 8 characters long';
+    }
 }
 
 
