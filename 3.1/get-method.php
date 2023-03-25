@@ -25,6 +25,8 @@ if (!$category || !$limit) die();
         </div>
     </div>
     <div class="column">
+        <form method="$_POST"></form>
+        
         <?php 
         showOutput('Showing category', $category);
         showOutput('Limit of', $limit);
