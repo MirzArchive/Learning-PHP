@@ -5,6 +5,11 @@ require_once('./../Inc/config.php');
 
 session_start();
 
+if (isAuthenticated()) {
+    redirect('admin.php');
+    die();
+}
+
 if (isset($_POST['login'])) {
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     $password = $_POST['password'];
@@ -19,7 +24,7 @@ if (isset($_POST['login'])) {
 
     if (authenticateUser($email, $password)) {
         $_SESSION['email'] = $email;
-        redirect('./../admin.php');
+        redirect('admin.php');
         die();
     } else {
         $status = 'The provided credential are invalid';

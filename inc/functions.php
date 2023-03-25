@@ -35,3 +35,14 @@ function authenticateUser($email, $password) {
 function redirect($url) {
     header("Location: $url");
 }
+
+function isAuthenticated() {
+    return isset($_SESSION['email']);
+}
+
+function ensureAuthorization() {
+    if (!isAuthenticated()) {
+        redirect('sessions.php');
+        die();
+    }
+}
