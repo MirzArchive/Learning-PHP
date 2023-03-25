@@ -16,4 +16,22 @@ function pluck($arr, $key)
 
     return $result;
 }
-?>
+
+function authenticateUser($email, $password) {
+    $validEmail = false;
+    $validPassword = false;
+    
+    if ($email == USER_NAME) {
+        $validEmail = true;
+    }
+
+    if ($password == PASSWORD) {
+        $validPassword = true;
+    }
+
+    return $validEmail && $validPassword;
+}
+
+function redirect($url) {
+    header("Location: $url");
+}
