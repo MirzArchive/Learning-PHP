@@ -64,11 +64,19 @@ In this section, you can find all the materials used during the course, such as 
 
 In this section, you can find all the assignments that were given during the class, along with their respective instructions and solutions.
 
-* Assignment 1 - 
+* Assignment 1 - Error Log in PHP
+* Assignment 2 - Iterate an Array with For Loops
+* Assignment 3 - Create a Function
+* Assignment 4 - Utilize Local & Global variables in a Function
+* Assignment 5 - Handle GET request
+* Assignment 6 - Handle POST request
+* Assignment 7 - Utilize PHP session for authentication
 
 ## Projects
 
 In this section, you can find all the exercises,games, and projects that were assigned during the course, along with their respective instructions and solutions.
+
+* Project 1 - Web Glossary
 
 ## Other Resources
 
