@@ -1,0 +1,18 @@
+[
+  {
+    "term": "HTML",
+    "definition": "HyperText Markup Language"
+  },
+  {
+    "term": "CSS",
+    "definition": "Cascading Style Sheets"
+  },
+  {
+    "term": "JS",
+    "definition": "JavaScript"
+  },
+  {
+    "term": "PHP",
+    "definition": "HyperText Preprocessor"
+  }
+]
