@@ -1,4 +1,12 @@
 <div class="row">
+    <form class="form-inline" action="" method="GET">
+        <div class="form-group">
+            <input type="text" name="search" id="search">
+            <input type="submit" value="Search">
+        </div>
+    </form>
+</div>
+<div class="row">
     <table class="table table-striped">
         <?php foreach ($data as $item) : ?>
             <tr>
@@ -7,15 +15,4 @@
             </tr>
         <?php endforeach; ?>
     </table>
-
-    <!-- <table class="table table-striped">
-        <?php
-        foreach ($data as $item) {
-            $term = $item->term;
-            $definition = $item->definition;
-
-            echo "<tr><td>$term</td><td>$definition</td></tr>";
-        }
-        ?>
-    </table> -->
 </div>

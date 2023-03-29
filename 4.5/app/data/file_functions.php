@@ -33,3 +33,12 @@ function getTerm($term) {
 
     return false;
 }
+
+function searchTerms($termSearch) {
+    $terms = getTerms();
+
+    $values = array_filter($terms, fn($item) => strpos($item->term, strtoupper($termSearch)) !== false
+    || strpos($item->definition, $termSearch) !== false);
+
+    return $values;
+}
