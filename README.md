@@ -71,6 +71,10 @@ In this section, you can find all the assignments that were given during the cla
 * Assignment 5 - Handle GET request
 * Assignment 6 - Handle POST request
 * Assignment 7 - Utilize PHP session for authentication
+* Assignment 8 - Separate PHP Logic with presentation
+* Assignment 9 - Parse and Utilize JSON Data
+* Assignment 10 - Detail Page for each data in JSON
+* Assignment 11 - Search Feature 
 
 ## Projects
 
