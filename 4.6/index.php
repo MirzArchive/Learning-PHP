@@ -2,10 +2,11 @@
 require('app/app.php');
 
 $viewBag = [
-    'title' => 'Glossary'
+    'title' => 'The Glossary',
+    'heading' => 'Glossary'
 ];
 
-if (isset($_GET['search'])) {
+if (isset($_GET['search']) && $_GET['search'] != '') {
     view('search', searchTerms($_GET['search']));
     die();
 }
