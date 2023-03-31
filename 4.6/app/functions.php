@@ -2,7 +2,7 @@
 function view($name, $data)
 {
     global $viewBag;
-    require("views/layout.view.php");
+    require(APP_DIR . "views/layout.view.php");
 }
 
 function output($value)
