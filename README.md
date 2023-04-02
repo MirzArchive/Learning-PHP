@@ -53,7 +53,7 @@ In this section, you can find all the materials used during the course, such as 
 * 6.4 Reading Data With "Select"
 * 6.5 Using Prepared Statements
 * 6.6 Searching Data
-* 6.7 Editing and Deliting Data
+* 6.7 Editing and Deleting Data
 * 6.8 Refactoring the Code
 * 7.1 Using Names Arguments
 * 7.2 Promoting Class Properties
