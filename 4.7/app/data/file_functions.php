@@ -1,25 +1,26 @@
 <?php
 
-function getData()
-{
-    $fileName = CONFIG['data_file'];
-
-    $json = '';
-
-    if (!file_exists($fileName)) {
-        file_put_contents($fileName, '');
-    } else {
-        $json = file_get_contents($fileName);
-    }
-
-    return $json;
-}
 
 function getTerms()
 {
     $data = getData();
 
     return json_decode($data);
+}
+
+function createTerm($term, $definition, $summary)
+{
+    $items = getTerms();
+
+    $obj = (object) [
+        'term' => $term,
+        'definition' => $definition,
+        'summary' => $summary
+    ];
+
+    $items[] = $obj;
+
+    setData($items);
 }
 
 function getTerm($term)
@@ -43,4 +44,28 @@ function searchTerms($termSearch)
         || strpos($item->definition, $termSearch) !== false);
 
     return $values;
+}
+
+function setData($arr)
+{
+    $fileName = CONFIG['data_file'];
+
+    $json = json_encode($arr);
+
+    file_put_contents($fileName, $json);
+}
+
+function getData()
+{
+    $fileName = CONFIG['data_file'];
+
+    $json = '';
+
+    if (!file_exists($fileName)) {
+        file_put_contents($fileName, '');
+    } else {
+        $json = file_get_contents($fileName);
+    }
+
+    return $json;
 }
