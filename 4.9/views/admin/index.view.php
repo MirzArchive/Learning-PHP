@@ -15,6 +15,7 @@
                     <td><a href="../admin/edit.php?key=<?php echo $item->term; ?>">Edit</a></td>
                     <td><a href="../detail.php?term=<?php echo $item->term; ?>"><?= $item->term; ?></a></td>
                     <td><?= $item->definition; ?></td>
+                    <td><a href="../admin/delete.php?key=<?php echo $item->term; ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         </table>

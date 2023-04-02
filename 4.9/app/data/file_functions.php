@@ -38,6 +38,22 @@ function updateTerm($original_term, $term, $definition, $summary)
     setData($terms);
 }
 
+function deleteTerm($term)
+{
+    $terms = getTerms();
+
+    for ($i = 0; $i < count($terms); $i++) {
+        if ($terms[$i]->term === $term) {
+            unset($terms[$i]);
+            break;
+        }
+    }
+
+    $newArr = array_values($terms);
+
+    setData($newArr);
+}
+
 function getTerm($term)
 {
     $terms = getTerms();

@@ -42,7 +42,8 @@ In this section, you can find all the materials used during the course, such as 
 * 4.6 Managing PHP Paths
 * 4.7 Creating PHP Terms
 * 4.8 Editing PHP Terms
-* 4.8 Editing PHP Terms
+* 4.9 Delete PHP Terms
+* 4.10 PHP Authentication
 * 5.1 Intro to PHP Classes
 * 5.2 Creating a Data Provider Class
 * 5.3 Writing a Data Abstraction Layer
