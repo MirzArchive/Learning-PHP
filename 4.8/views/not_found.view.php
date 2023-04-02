@@ -6,8 +6,6 @@
         </div>
     </div>
     <div class="column text-center">
-        <h1><?= $data->term ?></h1>
-        <h2><?= $data->definition ?></h2>
-        <p><?= $data->summary ?></p>
+        Not found.
     </div>
 </div>
