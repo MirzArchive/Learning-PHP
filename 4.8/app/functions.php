@@ -18,12 +18,18 @@ function redirect($url)
     die();
 }
 
+function isGet()
+{
+    return ($_SERVER['REQUEST_METHOD'] === 'GET');
+}
+
 function isPost()
 {
     return ($_SERVER['REQUEST_METHOD'] === 'POST');
 }
 
-function sanitize($value) {
+function sanitize($value)
+{
     $temp = htmlspecialchars(trim($value), FILTER_UNSAFE_RAW);
 
     if ($temp === false) return '';

@@ -23,6 +23,21 @@ function createTerm($term, $definition, $summary)
     setData($items);
 }
 
+function updateTerm($original_term, $term, $definition, $summary)
+{
+    $terms = getTerms();
+
+    foreach ($terms as $value) {
+        if ($value->term == $original_term) {
+            $value->term = $term;
+            $value->definition = $definition;
+            $value->summary = $summary;
+        }
+    }
+
+    setData($terms);
+}
+
 function getTerm($term)
 {
     $terms = getTerms();
