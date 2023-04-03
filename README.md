@@ -88,7 +88,8 @@ In this section, you can find all the exercises,games, and projects that were as
 In this section, you can find other resources that may be useful for the course, such as online tutorials, books, recommended books, and sample code.
 
 * Envato Tuts+. [PHP Tutorial for Beginners - Full Course | OVER 7 HOURS!][yt-link-1] *YouTube*, 12 January. 2022, https://youtu.be/t0syDUSbdfE
-* Traversy Media. [PHP For Beginners | 3+ Hour Crash Course][yt-link-2] *YouTube*, 30 March. 2022, https://youtu.be/BUCiSSyIGGU
+* Bro Code. [PHP Full Course for non-haters 🐘 (2023)][yt-link-2] *YouTube*, 29 March. 2023, https://youtu.be/zZ6vybT1HQs
+* Traversy Media. [PHP For Beginners | 3+ Hour Crash Course][yt-link-3] *YouTube*, 30 March. 2022, https://youtu.be/BUCiSSyIGGU
 
 ## Contact Information
 
@@ -98,4 +99,5 @@ Happy coding!
 
 [email-me]: mailto:exquisitemirza@gmail.com
 [yt-link-1]: https://youtu.be/t0syDUSbdfE
-[yt-link-2]: https://youtu.be/BUCiSSyIGGU
+[yt-link-2]: https://youtu.be/zZ6vybT1HQs
+[yt-link-3]: https://youtu.be/BUCiSSyIGGU
