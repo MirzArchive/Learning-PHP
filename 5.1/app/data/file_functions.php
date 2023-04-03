@@ -1,5 +1,6 @@
 <?php
 
+require('glossaryterm.class.php');
 
 function getTerms()
 {
@@ -12,13 +13,7 @@ function createTerm($term, $definition, $summary)
 {
     $items = getTerms();
 
-    $obj = (object) [
-        'term' => $term,
-        'definition' => $definition,
-        'summary' => $summary
-    ];
-
-    $items[] = $obj;
+    $items[] = new GlossaryTerm($term, $definition, $summary);
 
     setData($items);
 }
