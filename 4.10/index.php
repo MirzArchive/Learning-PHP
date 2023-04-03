@@ -12,4 +12,3 @@ if (isset($_GET['search']) && $_GET['search'] != '') {
 }
 
 view('index', getTerms());
-?>

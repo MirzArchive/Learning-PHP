@@ -10,9 +10,9 @@ $viewBag = [
     'heading' => ''
 ];
 
-// TODO: validate GET request input
+$term = sanitize($_GET['term']);
 
-$data = getTerm($_GET['term']);
+$data = getTerm($term);
 
 if ($data == false) {
     $viewBag['heading'] = 'Status: Not Found';

@@ -41,8 +41,7 @@ function isAuthenticated() {
 }
 
 function ensureAuthorization() {
-    if (!isAuthenticated()) {
+    if (isAuthenticated() === false) {
         redirect('sessions.php');
-        die();
     }
 }
