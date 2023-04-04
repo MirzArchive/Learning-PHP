@@ -17,7 +17,7 @@ if (isGet()) {
         die();
     }
 
-    $term = getTerm($key);
+    $term = Data::getTerm($key);
 
     if (empty($key)) {
         view('not_found');
@@ -38,6 +38,6 @@ if (isPost()) {
         redirect('index.php');
     }
 
-    updateTerm($original, $term, $definition, $summary);
+    Data::updateTerm($original, $term, $definition, $summary);
     redirect('index.php');
 }

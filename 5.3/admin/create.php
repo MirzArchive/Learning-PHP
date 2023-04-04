@@ -17,7 +17,7 @@ if (isPost()) {
     if (empty($term) || empty($definition) || empty($summary)) {
         redirect('index.php');
     } else {
-        createTerm($term, $definition, $summary);
+        Data::createTerm($term, $definition, $summary);
         redirect('index.php');
     }
 }

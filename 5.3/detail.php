@@ -12,7 +12,7 @@ $viewBag = [
 
 $term = sanitize($_GET['term']);
 
-$data = getTerm($term);
+$data = Data::getTerm($term);
 
 if ($data == false) {
     $viewBag['heading'] = 'Status: Not Found';

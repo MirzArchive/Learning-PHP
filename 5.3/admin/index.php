@@ -9,4 +9,4 @@ $viewBag = [
     'heading' => 'Glossary'
 ];
 
-view('admin/index', getTerms());
+view('admin/index', Data::getTerms());
