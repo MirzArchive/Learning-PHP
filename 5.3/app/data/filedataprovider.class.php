@@ -1,16 +1,7 @@
 <?php
 
-require('glossaryterm.class.php');
-
-class FileDataProvider
+class FileDataProvider extends DataProvider
 {
-    public $filePath;
-
-    function __construct(string $filePath)
-    {
-        $this->filePath = $filePath;
-    }
-
     public function getTerms()
     {
         $data = $this->getData();
@@ -85,12 +76,12 @@ class FileDataProvider
     {
         $json = json_encode($arr);
 
-        file_put_contents($this->filePath, $json);
+        file_put_contents($this->source, $json);
     }
 
     private function getData()
     {
-        $fileName = $this->filePath;
+        $fileName = $this->source;
 
         $json = '';
 
