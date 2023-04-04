@@ -6,9 +6,11 @@ $viewBag = [
     'heading' => 'Glossary'
 ];
 
+$data = new FileDataProvider(CONFIG['data_file']);
+
 if (isset($_GET['search']) && $_GET['search'] != '') {
-    view('search', searchTerms($_GET['search']));
+    view('search', $data->searchTerms($_GET['search']));
     die();
 }
 
-view('index', getTerms());
+view('index', $data->getTerms());

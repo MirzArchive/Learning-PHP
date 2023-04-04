@@ -1,6 +1,5 @@
 <?php
 
-require('glossaryterm.class.php');
 
 function getTerms()
 {
