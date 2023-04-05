@@ -1,10 +1,12 @@
 <?php
 
+require('dataprovider.class.php');
+
 class Data
 {
     static private $dataStore;
 
-    static public function initialize($dataProvider)
+    static public function initialize(DataProvider $dataProvider)
     {
         return self::$dataStore = $dataProvider;
     }
