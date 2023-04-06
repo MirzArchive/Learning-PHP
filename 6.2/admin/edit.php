@@ -28,16 +28,16 @@ if (isGet()) {
 }
 
 if (isPost()) {
+    $id = sanitize($_POST['id']);
     $term = sanitize($_POST['term']);
     $definition = sanitize($_POST['definition']);
     $summary = sanitize($_POST['summary']);
-    $original = sanitize($_POST['original-term']);
 
-    if (empty($term) || empty($definition) || empty($summary) || empty($original)) {
+    if (empty($term) || empty($definition) || empty($summary) || empty($id)) {
         // TODO: display message
         redirect('index.php');
     }
 
-    Data::updateTerm($original, $term, $definition, $summary);
+    Data::updateTerm($id, $term, $definition, $summary);
     redirect('index.php');
 }

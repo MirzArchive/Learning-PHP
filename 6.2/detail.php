@@ -1,7 +1,7 @@
 <?php
 require('app/app.php');
 
-if (!isset($_GET['term'])) {
+if (!isset($_GET['id'])) {
     redirect('index.php');
 }
 
@@ -10,9 +10,9 @@ $viewBag = [
     'heading' => ''
 ];
 
-$term = sanitize($_GET['term']);
+$id = sanitize($_GET['id']);
 
-$data = Data::getTerm($term);
+$data = Data::getTerm($id);
 
 if ($data == false) {
     $viewBag['heading'] = 'Status: Not Found';

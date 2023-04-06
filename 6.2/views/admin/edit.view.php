@@ -7,7 +7,7 @@
     </div>
     <div class="row">
         <form action="" method="POST">
-            <input type="hidden" name="original-term" value="<?= $data->term ?>">
+            <input type="hidden" name="id" value="<?= $data->id ?>">
             <div class="form-group">
                 <label for="term">Term:</label>
                 <input class="form-control" type="text" name="term" id="term" value="<?= $data->term ?>">

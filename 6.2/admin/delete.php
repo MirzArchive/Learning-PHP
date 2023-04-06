@@ -28,13 +28,13 @@ if (isGet()) {
 }
 
 if (isPost()) {
-    $term = sanitize($_POST['term']);
+    $key = sanitize($_POST['key']);
 
-    if (empty($term)) {
+    if (empty($key)) {
         // TODO: display message
         redirect('index.php');
     }
 
-    Data::deleteTerm($term);
+    Data::deleteTerm($key);
     redirect('index.php');
 }

@@ -7,10 +7,8 @@
     </div>
     <div class="row">
         <form action="" method="POST">
-            <div class="form-group">
-                <label for="term">Term:</label>
-                <input class="form-control" type="text" name="term" id="term" value="<?= $data->term ?>">
-            </div>
+            <input type="hidden" name="key" value="<?= $data->id ?>">
+            <p>Are you sure you want to delete <?= $data->term ?></p>
             <div class="from-group">
                 <input type="submit" value="Delete">
             </div>
