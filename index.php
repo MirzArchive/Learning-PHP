@@ -9,11 +9,11 @@
 <body>
     <h1>This is the Website Title</h1>
     <?php 
-    $name = "Spongebob";
+    $arr = [
+        'key' => 'Mirza'
+    ];
 
-    echo 'Hello, ' . $name;
-    
-    echo "Hello, $name";
+    echo "Hello {$arr['key']}";
     ?>
 </body>
 </html>
