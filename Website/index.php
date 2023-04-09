@@ -17,9 +17,13 @@
         <input type="submit" value="Login"><br>
     </form> -->
     <form action="index.php" method="post">
-        <label for="quantity">Quantities</label>
-        <input type="number" name="quantity" id="quantity"><br>
-        <input type="submit" value="Order"><br>
+        <label for="x">X:</label>
+        <input type="number" name="x" id="x"><br>
+        <label for="y">Y:</label>
+        <input type="number" name="y" id="y"><br>
+        <label for="z">Z:</label>
+        <input type="number" name="z" id="z"><br>
+        <input type="submit" value="Total"><br>
     </form>
 </body>
 
@@ -29,8 +33,11 @@
 // echo "{$_GET['username']}<br>";
 // echo $_GET['password'];
 
-if (isset($_POST['quantity'])) {
-    echo "You ourder {$_POST['quantity']} x Pizzas <br>";
-    echo "The total is $" . $_POST['quantity'] * 128_500;
+if (isset($_POST['x']) && isset($_POST['y']) && isset($_POST['z'])) {
+    // echo abs($_POST['x']) . "<br>";
+    // echo abs($_POST['y']) . "<br>";
+    // echo abs($_POST['z']) . "<br>";
+
+    echo rand($_POST['x'], $_POST['z']);
 }
 ?>
