@@ -10,28 +10,33 @@
 
 <body>
     <form action="index.php" method="post">
-        <label for="country">Country:</label><br>
-        <input type="text" name="country" id="country" placeholder="Country Name">
-
-        <input type="submit" value="Enter">
+        <input type="radio" name="payment-type" id="visa" value="Visa">Visa<br>
+        <input type="radio" name="payment-type" id="mastercard" value="Mastercard">Mastercard<br>
+        <input type="radio" name="payment-type" id="american-express" value="American Express">American Express<br>
+        <input type="submit" value="Submit">
     </form>
 </body>
 
 </html>
 
 <?php
-$capitals = [
-    'Indonesia' => 'Jakarta',
-    'USA' => 'Washington D.C',
-    'Japan' => 'Tokyo',
-    'China' => 'Beijing',
-    'India' => 'New Delhi',
-];
+if (isset($_POST['payment-type'])) {
+    $paymentType = $_POST['payment-type'];
 
-if (isset($_POST['country'])) {
-    $country = $_POST['country'];
-    $capital = $capitals[$country];
-
-    echo "The capital city of {$country} is {$capital}";
+    switch ($paymentType) {
+        case 'Visa':
+            echo "You choose {$paymentType}";
+            break;
+        case 'Mastercard':
+            echo "You choose {$paymentType}";
+            break;
+        case 'American Express':
+            echo "You choose {$paymentType}";
+            break;
+        default:
+            echo 'Please select atleast your payment method';
+            break;
+    }
 }
+
 ?>
