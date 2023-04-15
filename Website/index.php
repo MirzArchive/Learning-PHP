@@ -9,35 +9,29 @@
 </head>
 
 <body>
-    <!-- <form action="index.php" method="get">
-        <label for="username">Username:</label><br>
-        <input type="text" name="username" id="username"><br>
-        <label for="password">Password:</label><br>
-        <input type="password" name="password" id="password"><br>
-        <input type="submit" value="Login"><br>
-    </form> -->
     <form action="index.php" method="post">
-        <label for="r">Radius (r):</label>
-        <input type="number" name="r" id="r"><br>
-        <input type="submit" value="Count"><br>
+        <label for="country">Country:</label><br>
+        <input type="text" name="country" id="country" placeholder="Country Name">
+
+        <input type="submit" value="Enter">
     </form>
 </body>
 
 </html>
 
 <?php
-// echo "{$_GET['username']}<br>";
-// echo $_GET['password'];
+$capitals = [
+    'Indonesia' => 'Jakarta',
+    'USA' => 'Washington D.C',
+    'Japan' => 'Tokyo',
+    'China' => 'Beijing',
+    'India' => 'New Delhi',
+];
 
-// if (isset($_POST['x']) && isset($_POST['y']) && isset($_POST['z'])) {
-//     echo abs($_POST['x']) . "<br>";
-//     echo abs($_POST['y']) . "<br>";
-//     echo abs($_POST['z']) . "<br>";
+if (isset($_POST['country'])) {
+    $country = $_POST['country'];
+    $capital = $capitals[$country];
 
-//     echo rand($_POST['x'], $_POST['z']);
-// }
-
-if (isset($_POST['r'])) {
-    echo pi() * ($_POST['r'] ** 2);
+    echo "The capital city of {$country} is {$capital}";
 }
 ?>
