@@ -9,10 +9,11 @@
 </head>
 
 <body>
-    <form action="index.php" method="post">
-        <input type="radio" name="payment-type" id="visa" value="Visa">Visa<br>
-        <input type="radio" name="payment-type" id="mastercard" value="Mastercard">Mastercard<br>
-        <input type="radio" name="payment-type" id="american-express" value="American Express">American Express<br>
+    <form action="index.php" method="POST">
+        <input type="checkbox" name="foods[]" value="Pizza">Pizza<br>
+        <input type="checkbox" name="foods[]" value="Sate Ayam">Sate Ayam<br>
+        <input type="checkbox" name="foods[]" value="Fried Rice">Fried Rice<br>
+        <input type="checkbox" name="foods[]" value="Nasi Uduk">Nasi Uduk<br>
         <input type="submit" value="Submit">
     </form>
 </body>
@@ -20,23 +21,10 @@
 </html>
 
 <?php
-if (isset($_POST['payment-type'])) {
-    $paymentType = $_POST['payment-type'];
-
-    switch ($paymentType) {
-        case 'Visa':
-            echo "You choose {$paymentType}";
-            break;
-        case 'Mastercard':
-            echo "You choose {$paymentType}";
-            break;
-        case 'American Express':
-            echo "You choose {$paymentType}";
-            break;
-        default:
-            echo 'Please select atleast your payment method';
-            break;
+if (isset($_POST['foods'])) {
+    $foods = $_POST['foods'];
+    foreach ($foods as $food) {
+        echo "{$food}<br>";
     }
 }
-
 ?>
