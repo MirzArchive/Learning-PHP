@@ -1,13 +1,33 @@
 <?php
-// setcookie('favorite-food', 'pizza', time() + (86400 * 2), '/');
-// setcookie('favorite-drink', 'lemonade', time() + (86400 * 1), '/');
-// setcookie('favorite-dessert', 'ice cream', time() + (86400 * 4), '/');
+session_start();
 
-setcookie('favorite-food', 'pizza', time() - 0, '/');
-setcookie('favorite-drink', 'lemonade', time() - 0, '/');
-setcookie('favorite-dessert', 'ice cream', time() - 0, '/');
+if (empty($_SESSION['username']) || empty($_SESSION['password'])) {
+    header('Location: login.php');
+    die();
+}
 
-foreach ($_COOKIE as $key => $value) echo "{$key} = {$value} <br>";
+echo "Hello {$_SESSION['username']}! <br> Welcome to the Index Page";
+?>
 
-if (isset($_COOKIE['favorite-food'])) echo "Your favorite food is {$_COOKIE['favorite-food']}";
-else echo 'You have no favorite food';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+    <input type="submit" value="Log Out" name="logout">
+    </form>
+</body>
+</html>
+
+<?php
+if (isset($_POST['logout'])) {
+    session_destroy();
+    header('Location: index.php');
+    die();
+}
+?>
