@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 require('fileDatabase.php');
 ?>
 
@@ -15,14 +13,13 @@ require('fileDatabase.php');
 </head>
 
 <body>
-    <form action="" method="POST">
+    <form action="register.php" method="POST">
         <label for="email">Email:</label><br>
-        <input type="text" name="email" id="email"><br>
-        <label for="password">Password:</label><br>
+        <input type="email" name="email" id="email"><br>
+        <label for="password">Password</label><br>
         <input type="password" name="password" id="password"><br>
-        <input type="submit" value="Login">
+        <input type="submit" value="Register">
     </form>
-    <p>Sign up <a href="register.php">here</a> if you haven't already signup</p>
 </body>
 
 </html>
@@ -31,18 +28,16 @@ require('fileDatabase.php');
 $db = new FileDatabase('database.json');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (!empty($_POST['email']) && !empty($_POST['password'])) {
+    if (!empty($_POST['email'] && !empty($_POST['password']))) {
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
 
-        if ($db->checkData($email, $password)) {
-            $_SESSION['token'] = 'I\'m a valid token and I\'m logged in :D';
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-            header('Location: index.php');
-            die;
-        } else {
-            echo '<br> Wrong Credentials!';
-        }
+        $db->setData($email, $hashedPassword);
+
+        header('Location: login.php');
+        die();
     }
 }
 ?>
